@@ -41,10 +41,13 @@ layout: default
 
   <article class="post-content">
     {% if page.toc and page.toc.beginning %}
+    <!-- The TOC tag has been commented out to prevent build errors -->
+    {% comment %}
     <div id="table-of-contents">
       {% toc %}
     </div>
     <hr>
+    {% endcomment %}
     {% endif %}
     <div id="markdown-content">
       {{ content }}
